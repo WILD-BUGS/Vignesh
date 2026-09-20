@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-imperial-deep: #3B0809;
+    --color-imperial-secondary: #5A0D0F;
+    --color-imperial-surface: #7A1719;
+
+    --color-gold-muted: #D8B05A;
+    --color-gold-highlight: #F0D38A;
+    --color-gold-light: #FFF0C2;
+
+    --color-paper-ivory: #F7E8C6;
+    --color-paper-beige: #C9B89A;
+  }
+
+  body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #3B0809;
+    color: #F7E8C6;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: 0.04em;
+  }
+
+  .font-quote {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-code, code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-seal {
+    font-family: 'Noto Serif SC', serif;
+  }
+}
+
+/* Custom Paper Texture & Gold Dust Pattern */
+.bg-paper-grain {
+  background-color: #3B0809;
+  background-image:
+    radial-gradient(circle at 70% 20%, rgba(216, 176, 90, 0.08), transparent 35%),
+    radial-gradient(circle at 20% 80%, rgba(216, 176, 90, 0.05), transparent 30%),
+    radial-gradient(circle at 50% 50%, rgba(122, 23, 25, 0.35), transparent 60%);
+}
+
+/* Red traditional paper fibers texture */
+.paper-fibers {
+  background-image: radial-gradient(rgba(216, 176, 90, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Traditional Gold Border Line */
+.gold-border {
+  border: 1px solid rgba(216, 176, 90, 0.28);
+  transition: all 0.35s ease;
+}
+
+.gold-border:hover {
+  border-color: rgba(240, 211, 138, 0.65);
+  box-shadow: 0 0 20px rgba(216, 176, 90, 0.15);
+}
+
+/* Traditional Carved Corner Accent */
+.chinese-corner {
+  position: relative;
+}
+
+.chinese-corner::before,
+.chinese-corner::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #D8B05A;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.chinese-corner::before {
+  top: 4px;
+  left: 4px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.chinese-corner::after {
+  bottom: 4px;
+  right: 4px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3B0809;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7A1719;
+  border: 1px solid rgba(216, 176, 90, 0.3);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D8B05A;
+}
